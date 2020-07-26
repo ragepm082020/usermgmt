@@ -1,0 +1,23 @@
+.headerFilter{
+    width:50%;display: inline-block;
+  }
+  .addUserModel{
+    width:45%;display: inline-block; text-align:right;
+  }
+
+  .addUserBtn{
+    border: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    color:#FFF;    
+    background: #55A3CF;
+  }
+  
+  .curPointer{
+    cursor:pointer;
+  }
+
+  .delBtn{
+    margin-left: 20px;
+    color:red;
+  }

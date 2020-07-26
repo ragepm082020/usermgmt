@@ -1,0 +1,29 @@
+.mat-h3, .mat-subheading-2, .mat-typography h3 {
+    font: 400 26px/32px candara, "Helvetica Neue", sans-serif;
+}
+.mat-form-field-infix{
+    width: 340px!important;
+}
+.signup-inner-container{    
+    margin: 0 auto; text-align: center; padding: 100px 3px;
+}
+.input-container{
+    width: 450px;margin: 0 auto; padding: 20px; text-align: center;border:1px solid #ada897; border-radius:25px;
+}
+
+p {
+    font-family: Lato;
+  }
+  .error-message {
+    color: red;
+  }
+  input.ng-touched.ng-invalid {
+    border: 1px solid red;
+  }
+
+  .btn-primary.disabled, .btn-primary:disabled {
+    color: #007bff;
+  }
+  .notifyCls{
+    color:red;font-size: 16px;
+  }

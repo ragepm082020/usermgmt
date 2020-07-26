@@ -1,0 +1,27 @@
+<div>
+    <h1>Employees List</h1>
+    <button type="button">Create new Employee</button>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Employee Name</th>
+                <th>Description</th>                
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr *ngFor="let employee of employees">
+                <td>{{employee.id}}</td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.description}}</td>
+                <!--<td>{{product.quantity}}</td>-->
+                <td>
+                   <!-- <button type="button" [routerLink]="['/crud/update/', product.id]">Update</button>
+                    <button type="button" (click)="crudService.delete(product.id)">Remove</button>-->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

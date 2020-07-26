@@ -1,0 +1,85 @@
+<div class="signup-container">    
+    <div class ="signup-inner-container">
+        <div><h2> User Registration</h2></div>
+        <div class="input-container">          
+            <div class="notifySignUpCls" *ngIf="showSignupSuccess"> 
+                Registration Successful !!!
+                <br/>
+                Click here to <a routerLink = "/login" >Login</a> to the application
+            </div>
+            <form [formGroup]="signupForm" (ngSubmit)="submitSignUpUser()">
+                <!-- <div class="form-group">
+                    <label>First Name*</label>
+                    <input class="form-control" formControlName="firstname" type="text" />
+                </div>               
+                
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.firstname">
+                        <div class="error-message" *ngIf="signupForm.get('firstname').hasError(error.type) && (signupForm.get('firstname').dirty || signupForm.get('firstname').touched)">
+                            {{ error.message }}
+                        </div>
+                    </ng-container>
+                </div> 
+    
+                <div class="form-group">
+                    <label>Last Name*</label>
+                    <input class="form-control" formControlName="lastname" type="text" />
+                </div>
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.lastname">
+                        <div class="error-message" *ngIf="signupForm.get('lastname').hasError(error.type) && (signupForm.get('lastname').dirty || signupForm.get('lastname').touched)">
+                            {{ error.message }}
+                        </div>
+                    </ng-container>
+                </div>-->
+    
+                <div class="form-group">
+                    <label>Email Id*</label>
+                    <input class="form-control" formControlName="email" type="text" />
+                </div>
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.email">
+                        <div class="error-message" *ngIf="signupForm.get('email').hasError(error.type) && 
+        (signupForm.get('email').dirty || signupForm.get('email').touched)">
+                            {{ error.message }}
+                        </div>
+                    </ng-container>
+                </div>
+    
+                <div class="form-group">
+                    <label>Password*</label>
+                    <input class="form-control" formControlName="password" type="password" />
+                </div>
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.password">
+                        <div class="error-message" *ngIf="signupForm.get('password').hasError(error.type) && (signupForm.get('password').dirty || signupForm.get('password').touched)">
+                            {{ error.message }}
+                        </div>
+                    </ng-container>
+                </div>
+    
+                <div class="form-group">
+                    <label>Confirm Password*</label>
+                    <input class="form-control" formControlName="confirmpassword" type="password" />
+                </div>
+                <div class="error-messages verifyPwd" style="height: 20px;">
+                    <ng-container *ngFor="let error of error_messages.confirmpassword">
+                        <div class="error-message " *ngIf="signupForm.get('confirmpassword').hasError(error.type) && (signupForm.get('confirmpassword').dirty || signupForm.get('confirmpassword').touched)">
+                            {{ error.message }}
+                        </div>
+                    </ng-container>
+                </div>
+          
+            <!---Form Error - {{ signupForm.errors | json }} --->
+          <br/>
+                <button class="form-control btn btn-primary btnSignUpSubmit" [disabled]="!signupForm.valid">Signup</button>
+            </form>
+        </div>           
+    </div>
+    
+    <!-- <mat-form-field appearance="fill">
+      <mat-label>Textarea</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field> -->
+  </div>
+  <router-outlet></router-outlet>

@@ -1,0 +1,51 @@
+<h2 mat-dialog-title>Add User</h2>
+<div mat-dialog-content class="" style="margin-top:25px;">
+  
+  <form [formGroup]="addUserForm" (ngSubmit)="addUser()">
+    <div class="form-group">
+        <label>Id</label>
+        <input class="form-control" formControlName="id" type="text" value='id' />
+    </div>
+    <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.id">
+            <div class="error-message" *ngIf="addUserForm.get('id').hasError(error.type) && (addUserForm.get('id').dirty || addUserForm.get('id').touched)">
+                {{ error.message }}
+            </div>
+        </ng-container>
+    </div>
+
+    <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" formControlName="name" type="text" />
+    </div>
+    <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.name">
+            <div class="error-message" *ngIf="addUserForm.get('name').hasError(error.type) && (addUserForm.get('name').dirty || addUserForm.get('name').touched)">
+                {{ error.message }}
+            </div>
+        </ng-container>
+    </div>
+    <div class="form-group">
+        <label>Dept</label>
+        <input class="form-control" formControlName="dept" type="text" />
+    </div>
+    <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.dept">
+            <div class="error-message" *ngIf="addUserForm.get('dept').hasError(error.type) && (addUserForm.get('dept').dirty || addUserForm.get('dept').touched)">
+                {{ error.message }}
+            </div>
+        </ng-container>
+    </div>
+    <div class="form-group">
+        <button class="form-control btn btn-primary btnSignUpSubmit" [disabled]="!addUserForm.valid" onclick>Insert User</button>
+    </div>
+
+</form>
+</div>
+<!--<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No</button>
+
+</div>-->
+
+
+  <!--<button mat-button [mat-dialog-close]="data.email" cdkFocusInitial>Yes</button>-->

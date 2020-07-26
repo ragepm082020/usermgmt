@@ -1,0 +1,30 @@
+<style>
+.header-menu{
+    height:40px;background-color: #558ACF;
+}
+.header-menu a {
+    text-decoration: none;
+    color:#FFF;
+    font-weight: bold;
+    text-align:left;
+   /* padding-right: 40px;
+    padding-left: 10px;*/
+    padding: 10px 40px 10px 10px;
+    font-size: 20px;
+    float:left;
+    cursor:pointer;
+}
+.header-menu a.logOut{
+    text-align:right;
+    float:right;
+    padding-right: 20px;
+    padding-left: 10px;
+    color:#CF5C55;
+}
+
+</style>
+<div class="header-menu" style="">
+    <a routerLink = "/dashboard">Dashboard</a> 
+    <a routerLink = "/user">User</a>
+    <a class="logOut" (click)="logOut()"> Logout</a>
+</div>

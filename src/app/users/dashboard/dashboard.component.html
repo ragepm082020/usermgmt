@@ -1,0 +1,23 @@
+
+<app-menu></app-menu>
+<div class="chartDiv">
+  <h2>Department wise staff count</h2>
+<div>
+    <canvas baseChart 
+      [data]="pieChartData" 
+      [labels]="pieChartLabels" 
+      [chartType]="pieChartType"
+      [options]="pieChartOptions"
+      [plugins]="pieChartPlugins"
+      [legend]="pieChartLegend">
+    </canvas>
+  </div>
+  <br/><br/>
+  <div>
+    <app-child (keyPressOnChild)="handlerOnParent($event)"></app-child>
+  </div>
+</div>
+
+
+
+ 
